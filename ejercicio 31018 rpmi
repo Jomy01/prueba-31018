@@ -1,0 +1,27 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		//declaración de variables 3 numeros y dos textos
+		int Nivel;
+		int PuntosVida;
+		int VidaFinal;
+		string introducirNivel;
+		string introducirPuntosVida;
+		
+		//inicialización, las dos primeras para que lea el valor introducido y las dos siguientes para que pueda convertir esos valores y trabajar con ellos
+		
+		introducirNivel = Console.ReadLine ();
+		introducirPuntosVida = Console.ReadLine ();
+		Nivel = Convert.ToInt32(introducirNivel);
+		PuntosVida = Convert.ToInt32(introducirPuntosVida);
+		
+		VidaFinal = Nivel * PuntosVida;
+		
+		
+		Console.WriteLine(VidaFinal);
+	}
+}
