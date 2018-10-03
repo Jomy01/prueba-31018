@@ -14,14 +14,16 @@ public class Program
 		
 		//inicialización, las dos primeras para que lea el valor introducido y las dos siguientes para que pueda convertir esos valores y trabajar con ellos
 		
+		Console.WriteLine("Introduce el NIvel");
 		introducirNivel = Console.ReadLine ();
+		Console.WriteLine("Introduce los puntos de vida");
 		introducirPuntosVida = Console.ReadLine ();
 		Nivel = Convert.ToInt32(introducirNivel);
 		PuntosVida = Convert.ToInt32(introducirPuntosVida);
 		
 		VidaFinal = Nivel * PuntosVida;
 		
-		
+		Console.WriteLine( "La vida final es");
 		Console.WriteLine(VidaFinal);
 	}
 }
