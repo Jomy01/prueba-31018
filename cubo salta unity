@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class saltar : MonoBehaviour {
+
+    public Rigidbody myRigidbody;
+    bool espaciopulsado;
+	// Use this for initialization
+	void Start () {
+        myRigidbody = GetComponent<Rigidbody>();
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        // introducimos una variableble de tipo booleano que devuelve verdadero si el espacio está pulsado
+
+        espaciopulsado = Input.GetKeyDown(KeyCode.Space);
+
+        if (espaciopulsado == true){
+            //solo se va aejecutar si pulsamos espacio
+            Vector3 nuevavelocidad = Vector3.up * 10f;
+            //la f de arriba es para decimales
+            myRigidbody.velocity = nuevavelocidad;
+            //el debug es para escribir mensajes en la consola
+            Debug.Log("Se ha pulsado el espacio");
+        }
+	}
+}
